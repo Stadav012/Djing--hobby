@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #ededed;
+  --accent-purple: #8b5cf6;
+  --accent-teal: #14b8a6;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-teal: var(--accent-teal);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(20, 184, 166, 0.3);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
